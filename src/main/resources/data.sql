@@ -1,0 +1,14 @@
+-- Insert Sample Data into Drug Table
+--INSERT INTO drug (drug_name, manufacturer, manufacture_date, expiry_date, drug_type, price, dosage_form, strength, quantity, side_effects, instructions, generic_availability)
+--VALUES
+--('Paracetamol', 'Manufacturer A', '2024-01-01', '2025-01-01', 'OTC', 10.50, 'Tablet', '500mg', 100, 'Nausea, Headache', 'Take after meals', true),
+--('Ibuprofen', 'Manufacturer B', '2023-12-01', '2025-12-01', 'OTC', 15.00, 'Capsule', '200mg', 150, 'Drowsiness, Stomach upset', 'Do not exceed 2 tablets per day', true),
+--('Amoxicillin', 'Manufacturer C', '2023-11-15', '2025-11-15', 'Prescription', 25.75, 'Tablet', '250mg', 200, 'Allergic reactions, Diarrhea', 'Take with water as prescribed', false),
+--('Cetirizine', 'Manufacturer D', '2024-02-01', '2026-02-01', 'OTC', 8.25, 'Tablet', '10mg', 300, 'Drowsiness, Dry mouth', 'Take once daily', true),
+--('Metformin', 'Manufacturer E', '2024-03-01', '2026-03-01', 'Prescription', 12.00, 'Tablet', '500mg', 400, 'Lactic acidosis, Nausea', 'Take with food', true),
+--('Aspirin', 'Manufacturer F', '2023-10-01', '2025-10-01', 'OTC', 7.50, 'Tablet', '300mg', 250, 'Stomach pain, Heartburn', 'Take with water', true),
+--('Loratadine', 'Manufacturer G', '2024-04-01', '2026-04-01', 'OTC', 5.75, 'Tablet', '10mg', 200, 'Drowsiness, Dry mouth', 'Take once daily as needed', true),
+--('Simvastatin', 'Manufacturer H', '2023-09-01', '2025-09-01', 'Prescription', 30.00, 'Tablet', '20mg', 500, 'Muscle pain, Nausea', 'Take at night', false),
+--('Clindamycin', 'Manufacturer I', '2023-08-01', '2025-08-01', 'Prescription', 18.50, 'Capsule', '300mg', 120, 'Diarrhea, Stomach upset', 'Follow prescribed dosage', false),
+--('Omeprazole', 'Manufacturer J', '2024-05-01', '2026-05-01', 'OTC', 9.50, 'Capsule', '20mg', 350, 'Headache, Dizziness', 'Take before meals', true);
+
