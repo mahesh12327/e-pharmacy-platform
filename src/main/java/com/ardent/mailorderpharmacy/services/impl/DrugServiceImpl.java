@@ -4,8 +4,9 @@ import com.ardent.mailorderpharmacy.exceptions.DrugNotFoundException;
 import com.ardent.mailorderpharmacy.models.Drug;
 import com.ardent.mailorderpharmacy.repositories.DrugRepository;
 import com.ardent.mailorderpharmacy.services.DrugService;
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class DrugServiceImpl implements DrugService {
     public DrugServiceImpl(DrugRepository drugRepository) {
         this.drugRepository = drugRepository;
     }
+
     @Override
     public List<Drug> getAllDrugs() {
         return drugRepository.findAll();
@@ -28,6 +30,16 @@ public class DrugServiceImpl implements DrugService {
     @Override
     public Optional<Drug> getDrugById(Long id) {
         return drugRepository.findById(id);
+    }
+
+    @Override
+    public List<Drug> getDrugsByDrugName(String name) {
+        return drugRepository.findByDrugNameContainingIgnoreCase(name);
+    }
+
+    @Override
+    public Page<Drug> getDrugsByDrugNameWithPagination(String name, Pageable pageable) {
+        return drugRepository.findByDrugNameContainingIgnoreCase(name, pageable);
     }
 
     @Override

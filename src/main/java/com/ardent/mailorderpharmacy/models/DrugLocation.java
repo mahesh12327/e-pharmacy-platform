@@ -3,6 +3,8 @@ package com.ardent.mailorderpharmacy.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Optional;
+
 @Entity
 @Table(name = "drug_location")
 @Data
@@ -16,12 +18,11 @@ public class DrugLocation {
     @JoinColumn(name = "drug_id", nullable = false)
     private Drug drug; // Many DrugLocation entries are linked to one Drug
 
-    @Column(nullable = false)
-    private String address; // Address of the drug storage location
-
-    @Column(nullable = false)
-    private String zipcode; // Zip code of the location
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "location_id", nullable = false)
+    private Location location; // Many DrugLocation entries are linked to one Location
 
     @Column(nullable = false)
     private Integer quantityInStock; // Quantity of the drug available at this location
+
 }
